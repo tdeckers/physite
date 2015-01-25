@@ -1,0 +1,7 @@
+.tox/*
+analytics.dat
+*.egg
+*.swp
+*.pyc
+build/*
+*/client_secrets.json
