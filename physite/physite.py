@@ -66,11 +66,13 @@ def display(scale, sessions, newsessions):
                 s_sessions = 60
         s_newsessions = int(s_sessions * newsessions / 100)
         print "Sessions: %d, new: %d" % (s_sessions, s_newsessions)
-        for i in range(s_sessions):
-                if (i < s_newsessions):
+        for i in range(strip.numPixels()):
+                if (i <= s_newsessions):
                         color = Color(0,0,127)
-                else:
+                elif (i <= s_sessions):
                         color = Color(127,127,127)
+                else:
+                        color = Color(0,0,0)
                 strip.setPixelColor(i, color)
         strip.show() 
 
